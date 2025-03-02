@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/0b20df913f.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
@@ -34,9 +35,70 @@
             <div class="about-col-2">
                 <h1 class="subtitle">About Me</h1>
                 <P>My name is Jester and I'am currently studying WebTech in University Of Cordillera. I was born and raised in Baguio City in the Philippines. As for my hobby, It is coding ,playing online games and editing videos for fun. </P>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI?UX</span><br>Designing Web/App Interfaces</li>
+                        <li><span>Web Development</span><br>Web/App Development</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2024-2025</span><br>1st Year Collage Student</li>
+                        <li><span>2025-Present</span><br>2nd Year Collage Student</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<!--Project-->
+<div id="project">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="project-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Project 1</h2>
+                <p></p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Project 2</h2>
+                <p></p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Project 3</h2>
+                <p></p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname) {
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    for (let tablink of tablinks) {
+        tablink.classList.remove("active-link"); // Fix: use tablink instead of tablinks
+    }
+    for (let tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+</script>
 </body>
 </html>
