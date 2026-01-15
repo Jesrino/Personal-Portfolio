@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jester Pariño - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/0b20df913f.js" crossorigin="anonymous"></script>
 </head>
@@ -13,10 +13,11 @@
             <nav>
                 <img src="images/logo.JPG" class="logo">
                 <ul>
-                    <li> <a href="#">Home</a></li>
-                    <li> <a href="#">About</a></li>
-                    <li> <a href="#">Project</a></li>
-                    <li> <a href="#">Contact</a></li>
+                    <li> <a href="#header">Home</a></li>
+                    <li> <a href="#about">About</a></li>
+                    <li> <a href="#project">Projects</a></li>
+                    <li> <a href="#contact">Contact</a></li>
+                    <li><button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button></li>
                 </ul>
             </nav>
             <div class="header-text">
@@ -48,7 +49,8 @@
                 <div class="tab-contents" id="education">
                     <ul>
                         <li><span>2024-2025</span><br>1st Year Collage Student</li>
-                        <li><span>2025-Present</span><br>2nd Year Collage Student</li>
+                        <li><span>2025-2026</span><br>2nd Year Collage Student</li>
+                        <li><span>2026-present</span><br>3rd Year Collage Student</li>
                     </ul>
                 </div>
             </div>
@@ -62,43 +64,39 @@
         <div class="project-list">
             <div>
                 <i class="fa-solid fa-code"></i>
-                <h2>Project 1</h2>
-                <p></p>
+                <h2>Personal Portfolio</h2>
+                <p>A responsive personal portfolio website built with HTML, CSS, and JavaScript to showcase skills and projects.</p>
                 <a href="#">Learn More</a>
             </div>
             <div>
                 <i class="fa-solid fa-code"></i>
-                <h2>Project 2</h2>
-                <p></p>
+                <h2>Todo App</h2>
+                <p>A simple task management application using React, allowing users to add, edit, and delete tasks.</p>
                 <a href="#">Learn More</a>
             </div>
             <div>
                 <i class="fa-solid fa-code"></i>
-                <h2>Project 3</h2>
-                <p></p>
+                <h2>Calculator</h2>
+                <p>A basic web-based calculator with standard arithmetic operations, built with HTML, CSS, and JavaScript.</p>
                 <a href="#">Learn More</a>
             </div>
         </div>
     </div>
 </div>
-<script>
-    var tablinks = document.getElementsByClassName("tab-links")
-    var tabcontents = document.getElementsByClassName("tab-contents")
-    function opentab(tabname) {
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+<!--Contact-->
+<div id="contact">
+    <div class="container">
+        <h1 class="sub-title">Contact Me</h1>
+        <p>Feel free to reach out for collaborations or inquiries!</p>
+        <div class="contact-info">
+            <p><i class="fa-solid fa-envelope"></i> jester.parino@example.com</p>
+            <p><i class="fa-solid fa-phone"></i> +63 123 456 7890</p>
+            <p><i class="fa-brands fa-github"></i> <a href="https://github.com/jesterparino" target="_blank">github.com/jesterparino</a></p>
+            <p><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/jesterparino" target="_blank">linkedin.com/in/jesterparino</a></p>
+        </div>
+    </div>
+</div>
 
-    for (let tablink of tablinks) {
-        tablink.classList.remove("active-link"); // Fix: use tablink instead of tablinks
-    }
-    for (let tabcontent of tabcontents) {
-        tabcontent.classList.remove("active-tab");
-    }
-
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
-}
-
-</script>
+    <script src="script.js"></script>
 </body>
 </html>
