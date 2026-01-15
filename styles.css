@@ -253,17 +253,199 @@ nav ul li a:hover::after{
     padding: 80px 0;
     color: #ababab;
 }
+
+.contact-info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.contact-card{
+    background: #262626;
+    padding: 40px;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s, box-shadow 0.5s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-card:hover{
+    background: red;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
+}
+
+.contact-card i{
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.contact-card h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.contact-card p{
+    font-size: 14px;
+    margin: 0;
+    color: #ababab;
+}
+
+.contact-card a{
+    color: #ababab;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.contact-card a:hover{
+    color: #fff;
+}
+
 .contact-info p{
     margin: 20px 0;
 }
+
 .contact-info i{
     margin-right: 10px;
     color: red;
 }
+
 .contact-info a{
     color: #ababab;
     text-decoration: none;
 }
+
 .contact-info a:hover{
     color: #fff;
+}
+
+/* Contact Form Section */
+.contact-form-section{
+    margin-top: 60px;
+    text-align: center;
+}
+
+.contact-form-section h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.contact-form{
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label{
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea{
+    width: 100%;
+    padding: 12px 15px;
+    background: #262626;
+    border: 2px solid #404040;
+    color: #fff;
+    border-radius: 5px;
+    font-family: 'poppins', sans-serif;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    outline: none;
+    border-color: red;
+}
+
+.form-group textarea{
+    resize: vertical;
+    min-height: 150px;
+}
+
+.submit-btn{
+    background: red;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    align-self: center;
+}
+
+.submit-btn:hover{
+    background: #ff3333;
+    transform: scale(1.05);
+}
+
+/* Light Mode Contact Styles */
+body.light-mode .contact-card{
+    background: #e8e8e8;
+    color: #333;
+}
+
+body.light-mode .contact-card:hover{
+    background: #ff6b6b;
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+}
+
+body.light-mode .contact-card i,
+body.light-mode .contact-card h3{
+    color: #333;
+}
+
+body.light-mode .contact-card p{
+    color: #666;
+}
+
+body.light-mode .contact-card a{
+    color: #666;
+}
+
+body.light-mode .contact-card a:hover{
+    color: #333;
+}
+
+body.light-mode .contact-form-section h2{
+    color: #333;
+}
+
+body.light-mode .form-group label{
+    color: #333;
+}
+
+body.light-mode .form-group input,
+body.light-mode .form-group textarea{
+    background: #fff;
+    border-color: #ddd;
+    color: #333;
+}
+
+body.light-mode .form-group input:focus,
+body.light-mode .form-group textarea:focus{
+    border-color: red;
 }
