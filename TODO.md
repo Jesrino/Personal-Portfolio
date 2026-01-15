@@ -1,3 +1,0 @@
-- [x] Fill in project descriptions in index.html
-- [x] Add contact section in index.html
-- [ ] Add contact styles in styles.css
