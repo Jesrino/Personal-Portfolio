@@ -248,6 +248,284 @@ nav ul li a:hover::after{
     transform: translate(-10px);
 }
 
+/* Project Card with Slideshow */
+.project-card {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.project-card .project-list div:hover {
+    background: red;
+    transform: translate(-10px);
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Slideshow Navigation Arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 12px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    z-index: 2;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: #262626;
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 15px;
+    position: relative;
+    animation: slideIn 0.3s;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    transition: color 0.3s;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: red;
+    text-decoration: none;
+}
+
+#modalTitle {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Modal Slideshow */
+.modal-slideshow {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.modal-slides-container {
+    width: 100%;
+    height: 100%;
+}
+
+.modal-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-slide.active {
+    display: block;
+}
+
+.modal-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.modal-prev, .modal-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -25px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    z-index: 10;
+}
+
+.modal-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.modal-prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.modal-prev:hover, .modal-next:hover {
+    background-color: rgba(255, 0, 0, 0.9);
+}
+
+/* Modal Description */
+.modal-description {
+    margin-bottom: 25px;
+}
+
+.modal-description h3 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.modal-description p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* Modal Buttons */
+.modal-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.modal-demo-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.modal-demo-btn:hover {
+    background: #ff3333;
+    transform: scale(1.05);
+}
+
+/* Light Mode Styles for Project Card */
+body.light-mode .project-card {
+    background: #e8e8e8;
+    color: #333;
+}
+
+body.light-mode .project-card:hover {
+    background: #ff6b6b;
+}
+
+body.light-mode .project-card h2 {
+    color: #333;
+}
+
+body.light-mode .project-card p {
+    color: #666;
+}
+
+body.light-mode .project-card .prev,
+body.light-mode .project-card .next {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+body.light-mode .project-card .prev:hover,
+body.light-mode .project-card .next:hover {
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
 /* Contact */
 #contact{
     padding: 80px 0;

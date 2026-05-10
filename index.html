@@ -11,13 +11,13 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/logo.JPG" class="logo">
+<img src="images/logo.JPG" class="logo" alt="Jester Portfolio Logo">
                 <ul>
                     <li> <a href="#header">Home</a></li>
                     <li> <a href="#about">About</a></li>
                     <li> <a href="#project">Projects</a></li>
                     <li> <a href="#contact">Contact</a></li>
-                    <li><button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button></li>
+<button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light theme"><i class="fas fa-moon"></i></button>
                 </ul>
             </nav>
             <div class="header-text">
@@ -31,7 +31,7 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="images/user.png" >
+<img src="images/user.png" alt="Profile Picture of Jester">
             </div>
             <div class="about-col-2">
                 <h1 class="subtitle">About Me</h1>
@@ -62,24 +62,79 @@
     <div class="container">
         <h1 class="sub-title">My Projects</h1>
         <div class="project-list">
-            <div>
-                <i class="fa-solid fa-code"></i>
+            <!-- Project 1: Personal Portfolio -->
+            <div class="project-card">
+                <div class="slideshow-container">
+                    <div class="slide active">
+                        <img src="images/background.png" alt="Portfolio Screenshot 1">
+                    </div>
+                    <div class="slide">
+                        <img src="images/user.png" alt="Portfolio Screenshot 2">
+                    </div>
+                    <a class="prev" onclick="changeSlide(this, -1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide(this, 1)">&#10095;</a>
+                </div>
                 <h2>Personal Portfolio</h2>
                 <p>A responsive personal portfolio website built with HTML, CSS, and JavaScript to showcase skills and projects.</p>
-                <a href="#">Learn More</a>
+                <a href="#" class="learn-more-btn" data-project="portfolio">Learn More</a>
+                <a href="#" class="demo-link">Demo</a>
             </div>
-            <div>
-                <i class="fa-solid fa-code"></i>
+            <!-- Project 2: Todo App -->
+            <div class="project-card">
+                <div class="slideshow-container">
+                    <div class="slide active">
+                        <img src="images/user.png" alt="Todo App Screenshot 1">
+                    </div>
+                    <div class="slide">
+                        <img src="images/logo.JPG" alt="Todo App Screenshot 2">
+                    </div>
+                    <a class="prev" onclick="changeSlide(this, -1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide(this, 1)">&#10095;</a>
+                </div>
                 <h2>Todo App</h2>
                 <p>A simple task management application using React, allowing users to add, edit, and delete tasks.</p>
-                <a href="#">Learn More</a>
+                <a href="#" class="learn-more-btn" data-project="todoapp">Learn More</a>
+                <a href="#" class="demo-link">Demo</a>
             </div>
-            <div>
-                <i class="fa-solid fa-code"></i>
+            <!-- Project 3: Multi Unit Converter -->
+            <div class="project-card">
+                <div class="slideshow-container">
+                    <div class="slide active">
+                        <img src="images/logo.JPG" alt="Converter Screenshot 1">
+                    </div>
+                    <div class="slide">
+                        <img src="images/background.png" alt="Converter Screenshot 2">
+                    </div>
+                    <a class="prev" onclick="changeSlide(this, -1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide(this, 1)">&#10095;</a>
+                </div>
                 <h2>Multi Unit Converter</h2>
                 <p>A basic web-based converter application with standard arithmetic operations, built with HTML, CSS, and JavaScript.</p>
-                <a href="http://jesrino.github.io/MultiUnitConverter/">Demo</a>
+                <a href="#" class="learn-more-btn" data-project="converter">Learn More</a>
+                <a href="http://jesrino.github.io/MultiUnitConverter/" class="demo-link" target="_blank">Demo</a>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- Project Modal -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 id="modalTitle">Project Title</h2>
+        <div class="modal-slideshow">
+            <div id="modalSlides" class="modal-slides-container">
+                <!-- Modal slides will be dynamically inserted -->
+            </div>
+            <a class="modal-prev" onclick="changeModalSlide(-1)">&#10094;</a>
+            <a class="modal-next" onclick="changeModalSlide(1)">&#10095;</a>
+        </div>
+        <div class="modal-description">
+            <h3>Description</h3>
+            <p id="modalDescription">Detailed description will appear here.</p>
+        </div>
+        <div class="modal-buttons">
+            <a id="modalDemoBtn" href="#" class="modal-demo-btn" target="_blank">View Project</a>
         </div>
     </div>
 </div>
@@ -111,10 +166,10 @@
                 <i class="fa-brands fa-linkedin"></i>
                 <h3>LinkedIn</h3>
                 <p>Connect on LinkedIn</p>
-                <a href="https://linkedin.com/in/jesterparino" target="_blank">Visit Profile</a>
+                <a href="www.linkedin.com/in/jester-parino-859228290" target="_blank">Visit Profile</a>
             </div>
         </div>
-        
+
     <script src="script.js"></script>
 </body>
 </html>
